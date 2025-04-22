@@ -60,7 +60,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        //either abort or remove the function
     }
 
     /**
@@ -68,7 +68,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //either abort or remove the function
     }
 
     /**
@@ -88,7 +88,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        //either abort or remove the function
     }
 
     /**
@@ -96,7 +96,7 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        //either abort or remove the function
     }
 
     /**
@@ -104,6 +104,7 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
+        //use DB transaction
         $user->roles()->detach();
         $user->categories()->detach();
         $user->delete();
